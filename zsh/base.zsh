@@ -106,6 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 alias zshconfig="code ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
+alias think="code ~/Thinkific/thinkific-dev"
+alias communities="code ~/Thinkific/communities-dev"
 
 include "$DOTFILES/zsh/pure.zsh"
 
