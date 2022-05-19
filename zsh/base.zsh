@@ -108,6 +108,7 @@ alias zshconfig="code ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
 alias think="code ~/Thinkific/thinkific-dev"
 alias communities="code ~/Thinkific/communities-dev"
+alias graphdump="bin/rake graphql:schema_dump"
 
 include "$DOTFILES/zsh/pure.zsh"
 
