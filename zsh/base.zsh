@@ -109,6 +109,7 @@ alias sourcezsh="source ~/.zshrc"
 alias think="code ~/Thinkific/thinkific-dev"
 alias communities="code ~/Thinkific/communities-dev"
 alias graphdump="bin/rake graphql:schema_dump"
+alias kill_sidekiq='ps -ef | grep sidekiq | grep -v grep | awk '{print $2}' | xargs kill -9'
 
 include "$DOTFILES/zsh/pure.zsh"
 
@@ -117,3 +118,13 @@ if [[ $(uname) = Darwin ]]; then
   include "$DOTFILES/zsh/thinkific.zsh"
   include "$DOTFILES/zsh/fzf.zsh"
 fi
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/jonathan.comberbach/.nvm/versions/node/v18.2.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/jonathan.comberbach/.nvm/versions/node/v18.2.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/jonathan.comberbach/.nvm/versions/node/v18.2.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/jonathan.comberbach/.nvm/versions/node/v18.2.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/jonathan.comberbach/.nvm/versions/node/v18.2.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/jonathan.comberbach/.nvm/versions/node/v18.2.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
